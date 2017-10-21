@@ -1,0 +1,14 @@
+﻿<Window x:Class="hellow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hellow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="#FFA99E9E">
+        <Button x:Name="buttonTest" Content="Test it!" HorizontalAlignment="Left" Margin="219,186,0,0" VerticalAlignment="Top" Width="75" Background="#FFE1BE5F" Click="Button_Click"/>
+        <Label x:Name="labelMsg" Content="Feel lucky?" HorizontalAlignment="Center" Margin="219,125,185.667,0" VerticalAlignment="Top" Width="114"/>
+
+    </Grid>
+</Window>
