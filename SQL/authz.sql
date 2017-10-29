@@ -1,0 +1,45 @@
+if not exists(select * from sys.databases where name = 'Authz')
+BEGIN
+    	CREATE DATABASE Authz
+END
+GO
+
+USE Authz
+
+
+DROP TABLE IF EXISTS PERMISSION;
+
+CREATE TABLE PERMISSION (
+		id int IDENTITY(1,1) PRIMARY KEY,
+		name varchar(100) NOT NULL, 
+		description varchar(500) );
+
+PRINT 'TABLE PERMISSION created';
+
+DROP TABLE IF EXISTS ROLE;
+
+CREATE TABLE ROLE (
+		id int IDENTITY(1,1) PRIMARY KEY, 
+		name varchar(100) NOT NULL INDEX ix_name NONCLUSTERED, 
+		description varchar(500) 
+	);
+
+PRINT 'TABLE ROLE created';
+
+DROP TABLE IF EXISTS ROLE_PERMISSION;
+
+CREATE TABLE ROLE_PERMISSiON(
+	roleId int NOT NULL INDEX id_roleId NONCLUSTERED,
+	permissionId int NOT NULL INDEX id_permissionId NONCLUSTERED);
+
+PRINT 'TABLE ROLE_PERMISSION created';
+
+DROP TABLE IF EXISTS ROLE_ASSIGNMENT;
+
+CREATE TABLE ROLE_ASSIGNMENT(
+	roleId int NOT NULL  INDEX id_roleId NONCLUSTERED,
+	subject varchar(100) NOT NULL INDEX ix_subject NONCLUSTERED);
+ 
+PRINT 'TABLE ROLE_ASSIGNMENT created';
+
+GO 
