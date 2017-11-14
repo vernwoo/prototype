@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27019.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blobreader", "blobreader\blobreader.csproj", "{9860E554-ED4B-4F96-90DF-133D1FBB7CDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9860E554-ED4B-4F96-90DF-133D1FBB7CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9860E554-ED4B-4F96-90DF-133D1FBB7CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9860E554-ED4B-4F96-90DF-133D1FBB7CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9860E554-ED4B-4F96-90DF-133D1FBB7CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA9FB1F5-D738-4F35-8A2D-2516731E5463}
+	EndGlobalSection
+EndGlobal
