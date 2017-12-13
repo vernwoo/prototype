@@ -1,16 +1,28 @@
 use Authz
 
 if not exists(select 1 from PERMISSION where name = 'ReadOperation')
-	INSERT INTO PERMISSION VALUES('ReadOperation', 'Read data from a tool');
+	BEGIN
+		INSERT INTO PERMISSION VALUES('ReadOperation', 'Read data from a tool');
+		PRINT 'ReadOperation permission added';
+	END
 
 if not exists(select 1 from PERMISSION where name = 'WriteOperation')
-	INSERT INTO PERMISSION VALUES('WriteOperation', 'Write data to a tool');
+	BEGIN
+		INSERT INTO PERMISSION VALUES('WriteOperation', 'Write data to a tool');
+		PRINT 'WriteOperation permission added';
+	END
 	
 if not exists(select 1 from ROLE where name = 'ReadRole')
-	INSERT INTO ROLE VALUES('ReadRole', 'Read role for all read operations');
+	BEGIN
+		INSERT INTO ROLE VALUES('ReadRole', 'Read role for all read operations');
+		PRINT 'ReadRole added';
+	END
 
 if not exists(select 1 from ROLE where name = 'WriteRole')
-	INSERT INTO ROLE VALUES('WriteRole', 'Write role for all write operations');
+	BEGIN
+		INSERT INTO ROLE VALUES('WriteRole', 'Write role for all write operations');
+		PRINT 'WriteRole added';
+	END
 
 --ReadRole map to all read permissions
 DECLARE @roleId int;
