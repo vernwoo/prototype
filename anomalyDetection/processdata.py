@@ -8,7 +8,7 @@ def truncate2minute(dt):
 data = DataFrame.from_csv('2017.csv')
 data['count'] = 1
 data['datetime'] = data['datetime'].apply(dateutil.parser.parse)
-data['datetime'] = data['datetime'].apply(truncate2min)
+data['datetime'] = data['datetime'].apply(truncate2minute)
 data['count'] = data.groupby(['datetime', 'upn', 'perm', 'result']).transform('sum')
 data = data.drop_duplicates()
 data.to_csv('2017_byminute.csv', encoding='utf-8')
