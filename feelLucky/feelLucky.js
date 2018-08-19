@@ -6,7 +6,7 @@ var readline = require('readline');
 var os = require('os');
 var stream = require('stream');
 
-var filePath = process.cwd() + "\\lucky.txt";
+var filePath = process.cwd() + "/lucky.txt";
 console.log("Reading from file " + filePath);
 var instream = fs.createReadStream(filePath);
 var outstream = new stream;
