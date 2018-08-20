@@ -6,12 +6,16 @@ var readline = require('readline');
 var os = require('os');
 var stream = require('stream');
 
+var port = 80;
 var filePath = process.cwd() + "/lucky.txt";
 console.log("Reading from file " + filePath);
 var instream = fs.createReadStream(filePath);
 var outstream = new stream;
 var rl = readline.createInterface(instream, outstream);
 var goodies = [];
+
+console.log('feelLucky site staring ......');
+
 rl.on('line', function(line) { 
 			console.log("line:", line);
 			goodies.push(line);
@@ -27,6 +31,6 @@ rl.on('close', function() {
 				res.write(goodies[index]);
 				res.end();
 				console.log('index is ' + index + ':' + goodies[index]);
-			}).listen(8080);
-			console.log("Now go to http://localhost:8080 to try your luck");
+			}).listen(port);
+			console.log('feelLucky site started. Goto http://host:' + port + ' to try your luck');
 		});
